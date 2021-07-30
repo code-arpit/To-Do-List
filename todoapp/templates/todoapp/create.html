@@ -1,0 +1,17 @@
+{% extends 'todoapp/todolist.html' %}
+
+{% block todo %}
+    <h1> My to-do list</h1> 
+    <a href='../viewitem/'> View List</a>
+    <form action='.' method="POST"> {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value='Save' />
+
+    </form>
+    
+    </ul>
+
+
+
+
+{% endblock todo %}

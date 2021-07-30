@@ -1,0 +1,14 @@
+{% extends 'todoapp/todolist.html' %}
+
+{% block todo %}
+    <h1> My to-do Item</h1>
+    <a href= '../' > View List </a>
+    <h4> Title --> {{ object.title}} </h4>
+    <p> Content --> {{ object.content }}</p>  
+    <a href= 'updateitem/' > Update </a> 
+    <a href= 'deleteitem/' > Delete </a> 
+
+
+
+
+{% endblock todo %}

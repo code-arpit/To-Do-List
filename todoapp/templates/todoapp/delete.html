@@ -1,0 +1,21 @@
+{% extends 'todoapp/todolist.html' %}
+
+{% block todo %}
+    <h1> My to-do list</h1>
+    <a href= '../' > View Item </a> 
+    <form action='.' method="POST"> {% csrf_token %}
+        <h3> Do you want to delete Item "{{ object.title }}"</h3>
+        <p> 
+            <input type="submit" value="YES" /> 
+            <a href = '../'> Cancel</a>
+        </p>
+
+    
+    </form>
+    
+    </ul>
+
+
+
+
+{% endblock todo %}

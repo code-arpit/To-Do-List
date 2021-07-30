@@ -1,0 +1,13 @@
+{% extends 'todoapp/todolist.html' %}
+
+{% block todo %}
+    <h1> My to-do list </h1>
+    <ul>
+        {% for item in object_list %}
+            <li> <a href='{{ item.get_detail_url }}'> view {{ item.title }}</a> </li>
+        {% endfor %}    
+    </ul>
+    
+    <a href='../createitem/'> Create Item</a>
+
+{% endblock todo %}
